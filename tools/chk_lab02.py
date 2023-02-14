@@ -20,7 +20,14 @@ class TestMain(unittest.TestCase):
     def test_hello_world(self):
         sys.argv = ["script_name"]
         main()
-        self.assertEqual(sys.stdout.getvalue().strip(), "Hello, STUST!")
+        self.assertEqual(sys.stdout.getvalue().strip(), "Hello, World!")
+
+    def test_hello_name(self):
+        names = ['Young', 'Jane', 'Jim', 'Jessica', 'Jacob', 'Emily', 'Michael', 'Sarah', 'David', 'Emma']
+        selected_name = random.choice(names)
+        sys.argv = ["script_name", selected_name]
+        main()
+        self.assertEqual(sys.stdout.getvalue().strip(), "Hello, " + selected_name + "!")
 
     def tearDown(self):
         sys.stdout = self.held
