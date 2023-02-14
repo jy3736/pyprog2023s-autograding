@@ -1,3 +1,5 @@
+# Do not modify this file.  It is used by the autograder.
+
 import unittest
 import sys
 import io

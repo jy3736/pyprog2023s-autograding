@@ -1,6 +1,6 @@
 # Do not modify this file, unless you know what you are doing!
 
-CMD = python3
+CMD = python
 DIR_HW = src
 DIR_CHECK = ../../tools
 THIS_DIR = $(lastword $(subst /, ,$(CURDIR)))
